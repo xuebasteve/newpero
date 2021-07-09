@@ -1,0 +1,17 @@
+'''
+复制程序可看到结果哦！不信的可以试一下
+'''
+import keyboard, pynput
+
+mouse = pynput.mouse.Controller()
+start = mouse.position
+print("鼠标在{0}处".format(start))
+mouse.move(50, 0)
+print("鼠标从{0}移到了{1}".format(start, mouse.position))
+keyboard.write("#这是keyboard的输出！\n")
+pynput.keyboard.Controller().type("#这是pynput的输出！\n")
+print("不信输出是在程序上的，可以把程序复制哦（keyboard和pynput的输出）")
+
+#下面为程序输出（因为鼠标在下面）
+#这是keyboard的输出！
+#这是pynput的输出！
